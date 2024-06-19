@@ -78,8 +78,16 @@ const myPromise = new Promise((resolve, reject) => {
 })
 
 console.log(myPromise);
-
-
+// to catch error using thenables
+myPromise.then(value => {
+    return value +111;
+})
+.then(newValue => {
+    console.log(newValue);
+})
+.then(err => {
+    console.error(err);
+})
 
 
 
