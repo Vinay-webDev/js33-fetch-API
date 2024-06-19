@@ -68,6 +68,7 @@ myPromise.then(value => {
 
 //2. rejected *****
 // to catch the error we can use thenables*****
+/*
 const myPromise = new Promise((resolve, reject) => {
     const error = true;
     if (!error) {
@@ -86,7 +87,49 @@ myPromise.then(value => {
 })
 .catch(err => {
     console.error(err);
+}) */
+/// before we move on to the pending state example we need to know what the reason we need the Promise ofcourse we know that it prevents callback hell besides that we need Promise for requesting data from server or other side of web 
+// kinda simulating the real purpose of the Promise
+
+const myPromise = new Promise((resolve, reject) => {
+    const error = false;
+    if(!error) {
+        resolve("yes! resolved the Promise!");
+    } else {
+        reject("No! rejected the Promise!");
+    }
 })
+
+const myNextPromise = new Promise((resolve, reject) => {
+    // to delay our Promise we have to use setTimeout()
+    setTimeout(function() {
+        resolve("myNextPromise resolved!");
+    }, 3000);
+})
+// instead of just getting the state I'm gonna log the value
+myNextPromise.then(value => {
+    console.log(value);
+})
+myPromise.then(value => {
+    console.log(value);
+})
+// eventhough we had myNextPromise before myPromise we got myPromise value first 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
