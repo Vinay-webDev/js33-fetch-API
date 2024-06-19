@@ -71,28 +71,22 @@ myPromise.then(value => {
 const myPromise = new Promise((resolve, reject) => {
     const error = true;
     if (!error) {
-        resolve("yes! resolved the Promise!");
+        resolve("yes! resovled the Promise!");
     } else {
-        reject("No! rejected the Promise!");
+        reject("No! rejected the Promise");
     }
 })
-
 console.log(myPromise);
-// to catch error using thenables
+// to catch error
 myPromise.then(value => {
-    return value +111;
+    return value+1;
 })
 .then(newValue => {
     console.log(newValue);
 })
-.then(err => {
+.catch(err => {
     console.error(err);
 })
-
-
-
-
-
 
 
 
