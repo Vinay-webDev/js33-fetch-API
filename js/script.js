@@ -4,7 +4,7 @@ promises,thenables and async/await */
 // callbacks = are the functions that are passed to the other functions as parameters 
 
 // example
-
+/*
 function firstFunction(parameter, callback) {
     // do stuff
     callback();
@@ -20,16 +20,24 @@ firstFunction(para, function() {
 
         })
     })
+}) */
+
+// to fix we have promises
+// Promise have 3 state: Pending, Fullfilled, Rejected
+
+//Promise has two parameters ==>> resolve and reject ==>> const myPromise = new Promise((resolve, reject) => {})
+
+const myPromise = new Promise((resolve, reject) => {
+    const error = false;
+    if (!error) {
+        resolve("yes! resolved the promise!");
+    } else {
+        reject("No! rejected the promise!");
+    }
 })
 
-
-
-
-
-
-
-
-
+console.log(myPromise);
+// so its just giving us the fullfilled state not the actual value to get the actual value we have a concept called thenables***
 
 
 
