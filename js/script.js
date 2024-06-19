@@ -51,7 +51,7 @@ firstFunction(para, function() {
 }) */
 // above is ex for fullfilled state of Promise // so I'm gonna do it again ///
 //1. fullfilled ******
-const myPromise = new Promise((resolve, reject) => {
+/*const myPromise = new Promise((resolve, reject) => {
     const error = false;
     if (!error) {
         resolve("yes! resolved the Promise!");
@@ -64,11 +64,20 @@ console.log(myPromise);
 // to get the actual value of the Promise
 myPromise.then(value => {
     console.log(value);
+}) */
+
+//2. rejected *****
+// to catch the error we can use thenables*****
+const myPromise = new Promise((resolve, reject) => {
+    const error = true;
+    if (!error) {
+        resolve("yes! resolved the Promise!");
+    } else {
+        reject("No! rejected the Promise!");
+    }
 })
 
-
-
-
+console.log(myPromise);
 
 
 
