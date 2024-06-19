@@ -27,14 +27,14 @@ firstFunction(para, function() {
 
 //Promise has two parameters ==>> resolve and reject ==>> const myPromise = new Promise((resolve, reject) => {})
 
-const myPromise = new Promise((resolve, reject) => {
+/*const myPromise = new Promise((resolve, reject) => {
     const error = false;
     if (!error) {
         resolve("yes! resolved the promise!");
     } else {
         reject("No! rejected the promise!");
     }
-})
+}) */
 
 //console.log(myPromise);
 // so its just giving us the fullfilled Promise state not the actual value to get the actual value we have a concept called thenables and need chain thenables like we did with callbacks***
@@ -43,12 +43,36 @@ const myPromise = new Promise((resolve, reject) => {
 /*myPromise.then(value => {
     console.log(value);
 })*/
-myPromise.then(value => {
+/*myPromise.then(value => {
     return value +1111;
 })
 .then(newValue => {
     console.log(newValue);
+}) */
+// above is ex for fullfilled state of Promise // so I'm gonna do it again ///
+//1. fullfilled ******
+const myPromise = new Promise((resolve, reject) => {
+    const error = false;
+    if (!error) {
+        resolve("yes! resolved the Promise!");
+    } else {
+        reject("No! rejected the Promise!");
+    }
 })
+// to get state of Promise
+console.log(myPromise);
+// to get the actual value of the Promise
+myPromise.then(value => {
+    console.log(value);
+})
+
+
+
+
+
+
+
+
 
 
 
