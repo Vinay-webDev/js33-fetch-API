@@ -36,14 +36,19 @@ const myPromise = new Promise((resolve, reject) => {
     }
 })
 
-console.log(myPromise);
-// so its just giving us the fullfilled state not the actual value to get the actual value we have a concept called thenables***
+//console.log(myPromise);
+// so its just giving us the fullfilled Promise state not the actual value to get the actual value we have a concept called thenables and need chain thenables like we did with callbacks***
 
-
-
-
-
-
+// we can chain thenables like callback
+/*myPromise.then(value => {
+    console.log(value);
+})*/
+myPromise.then(value => {
+    return value +1111;
+})
+.then(newValue => {
+    console.log(newValue);
+})
 
 
 
