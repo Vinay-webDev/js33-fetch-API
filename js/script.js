@@ -128,16 +128,25 @@ const users = fetch("https://jsonplaceholder.typicode.com/users");
     console.log(response);
 }) */
 
-fetch("https://jsonplaceholder.typicode.com/users")
+/*fetch("https://jsonplaceholder.typicode.com/users")
 .then(response => {
     return response.json();
 })
 .then(data => {
     console.log(data);
+}) */
+// we still can't work with these data as it is not available globally
+// to work with user data we need to do this 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => {
+    return response.json()
 })
-
-
-
+.then(data => {
+    data.forEach(user => {
+        console.log(user);
+    })
+})
 
 
 
