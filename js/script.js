@@ -90,7 +90,7 @@ myPromise.then(value => {
 }) */
 /// before we move on to the pending state example we need to know what the reason we need the Promise ofcourse we know that it prevents callback hell besides that we need Promise for requesting data from server or other side of web 
 // kinda simulating the real purpose of the Promise
-
+/*
 const myPromise = new Promise((resolve, reject) => {
     const error = false;
     if(!error) {
@@ -112,12 +112,16 @@ myNextPromise.then(value => {
 })
 myPromise.then(value => {
     console.log(value);
-})
+}) */
 // eventhough we had myNextPromise before myPromise we got myPromise value first 
 
+////////////////////////////////////////////////////////////////
+//3. pending state
+const users = fetch("https://jsonplaceholder.typicode.com/users");
 
-
-
+// pending
+// you don't have to log this to the console still to visualize I'm doing it
+console.log(users);
 
 
 
