@@ -121,7 +121,31 @@ const users = fetch("https://jsonplaceholder.typicode.com/users");
 
 // pending
 // you don't have to log this to the console still to visualize I'm doing it
-console.log(users);
+//console.log(users);
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => {
+    console.log(response);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
