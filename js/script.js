@@ -37,7 +37,7 @@ firstFunction(para, function() {
 }) */
 
 //console.log(myPromise);
-// so its just giving us the fullfilled Promise state not the actual value to get the actual value we have a concept called thenables and need chain thenables like we did with callbacks***
+// so its just giving us the fullfilled Promise state not the actual value to get the actual value we have a concept called thenables and need to chain thenables like we did with callbacks***
 
 // we can chain thenables like callback
 /*myPromise.then(value => {
